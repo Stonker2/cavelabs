@@ -1,0 +1,145 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative; /* To position the overlay */
+    height: 100vh; /* Ensures the background takes up the full height of the viewport */
+}
+
+/* Add the background image (GIF) */
+body::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWNzMmE3MGl3Zm53Zmg4Mzg1dHN2d201b3N1MWVqc3ZlZnZuOXlkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUOwGj1jwTZq5Kh3Ko/giphy.webp'); /* Replace with the actual GIF URL */
+    background-size: cover; /* Ensures the GIF covers the whole page */
+    background-position: center center; /* Centers the GIF */
+    background-repeat: no-repeat; /* Ensures the GIF does not repeat */
+    opacity: 0.7; /* Set the opacity to 70% */
+    z-index: -1; /* Make sure the overlay is behind the content */
+}
+
+/* Wrapper for centering the content */
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #2f6f47; /* Dark Green */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Main content styling */
+.main-content {
+    text-align: center;
+}
+
+/* Team section styling */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Add space between elements */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly translucent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for team photo */
+.team-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px; /* Optional: round corners of the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: add shadow around the image */
+    margin-top: 20px; /* Space between heading and image */
+}
+
+/* Styling for the team description */
+.team-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.team-description h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #3a5a40; /* Medium Green */
+    font-weight: 600;
+}
+
+.team-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Footer section styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: rgba(211, 242, 226, 0.9); /* Light Greenish Footer with a slight transparency */
+    border-radius: 8px;
+}
+
+footer p {
+    color: #2f6f47;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .team-section {
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-photo {
+        max-width: 90%;
+    }
+
+    .team-description h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-description p {
+        font-size: 1rem;
+    }
+}
